@@ -1,0 +1,2 @@
+arr=[2,3,3,3,5]
+print(arr.count(3))
