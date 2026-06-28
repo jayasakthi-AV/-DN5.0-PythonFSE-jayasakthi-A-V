@@ -1,0 +1,35 @@
+```sql
+-- 1NF analysis
+--all the tables satisfy  1nf.
+--In all the department,students,course,enrollment,professors table satisfy following condition.
+--all the table have primary key.
+--no mixing of datatypes.
+--there is no grouping of records in one cell.
+--no particular order of records in table.
+
+
+
+
+-- 2NF Analysis:
+-- Considering the candidate key (student_id, course_id),
+-- both enrollment_date and grade depend on the complete candidate key.
+-- Neither attribute depends only on student_id or only on course_id.
+-- Therefore, there are no partial dependencies.
+-- The enrollments table satisfies 2NF.
+
+
+-- 3NF Analysis:
+-- Storing department_name in the students table would violate 3NF.
+-- department_name depends on department_id, not directly on student_id.
+-- This creates a transitive dependency (student_id -> department_id -> department_name).
+-- Therefore, department_name should be stored in the departments table.
+-- The students table satisfies 3NF by storing only department_id as a foreign key.
+
+
+
+-- 3NF Analysis (Enrollments Table):
+-- The enrollments table has no transitive dependencies.
+-- The non-key attributes (enrollment_date and grade) do not depend on other non-key attributes.
+-- They depend directly on the enrollment record (or the candidate key student_id + course_id).
+-- Therefore, the enrollments table satisfies Third Normal Form (3NF).
+```
