@@ -1,0 +1,16 @@
+select * from student 
+where enrollment_year=2022
+order by last_name asc;
+
+select * from courses
+where credits>3
+order by credit DESC;
+
+SELECT * from professors
+where salary BETWEEN 80000 and 95000;
+
+SELECT * from student  where email like '%@college.edu';
+
+SELECT enrollment_year ,count(*) from student 
+group by enrollment_year; 
+

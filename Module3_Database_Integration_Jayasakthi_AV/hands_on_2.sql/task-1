@@ -1,0 +1,14 @@
+--commands
+insert into student(first_name, last_name, email, date_of_birth, department_id,enrollment_year)  values
+('abishek',  'kumar',    'abishekkumar@college.edu',    '2003-04-1', 2, 2022),
+('ram',  'mehta',    'rammehta@college.edu',    '2003-02-1', 1, 2022);
+
+update enrollments
+set grade = 'B'
+where student_id = 5 and course_id = 1;
+
+DELETE FROM enrollments
+WHERE grade IS NULL;
+
+select count(*)  from enrollments;
+
